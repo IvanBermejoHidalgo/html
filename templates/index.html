@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/templates/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxkUJNUGGJHk7yQ_9Apw3KDUCOihr7gM_p3A&s" class="imagen-circular" alt="Descripción de la imagen">
+    <h1 class="nom">{{header}}</h1>
+    <p>{{edad}}</p>
+    <p>{{telefono}}</p>
+    <p>{{email}}</p>
+<div>
+
+    <div class="cuatro">
+        <h2 class="linea">{{infoper}}</h2>
+        <ul>
+            {% for info in infos %}
+            <li>
+                <p>{{ info.edad }}</p>
+                <p>{{ info.telefono }}</p>
+                <p>{{ info.email }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="uno">
+        <h2 class="linea">{{estudios}}</h2>
+        <ul>
+            {% for educacion in educaciones %}
+            <li>
+                <h3>{{ educacion.titulo }}</h3>
+                <p>{{ educacion.resumen }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <br>
+
+    <div class="dos">
+        <h2 class="linea">{{trabajo}}</h2>
+        <ul>
+            {% for experiencia in experiencias %}
+            <li>
+                <h3>{{ experiencia.titulo }}</h3>
+                <p>{{ experiencia.resumen }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <br>
+
+    <div>
+    <h2 class="linea">{{otras}}</h2>
+    <ul>
+        {% for otro in otros %}
+        <li>
+            <h3>{{ otro.titulo }}</h3>
+            <p>{{ otro.resumen }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+</div>
+</body>
+</html>
